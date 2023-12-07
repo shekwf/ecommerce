@@ -105,7 +105,7 @@
                                 <p class="card-text"><?php echo $row['description']; ?></p>
                             </div>
                             <div class="card-footer">
-                                <a href="#" class="btn btn-primary">add to card</a>
+                                <a href="cartController.php?add-to-cart=<?php echo $row['id']; ?>" class="btn btn-primary">add to card</a>
                                 <a href="single.php?id=<?php echo $row['id']; ?>" class="btn btn-success">more info</a>
                             </div>
                         </div>
