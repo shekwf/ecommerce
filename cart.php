@@ -144,7 +144,7 @@ foreach($session as $keySession => $value){
                            $price= array_sum($price);
                            echo $price;
                            ?></td>
-                        <td><a href="http://localhost/ecommerce/Zsender.php">پرداخت</a></td>
+                        <td><a href="http://localhost/learn/ecommerce/zarinpal/request.php">پرداخت</a></td>
                         </tr>
                 </table>
             </div>

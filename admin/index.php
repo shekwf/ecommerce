@@ -1,5 +1,8 @@
 <?php
 require_once '../inc/confing.php';
+if (!isset($_SESSION['admin'])){
+    header('location: http://localhost/learn/ecommerce/register/register.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -8,27 +8,35 @@
                 <thead>
                 <tr>
                     <th>ردیف</th>
-                    <th>تصویر</th>
                     <th>نام</th>
-                    <th>دسته بندی</th>
                     <th>قیمت</th>
-                    <th>مشاهده</th>
-                    <th>حذف</th>
+                    <th>شماره پیگیری</th>
+                    <th>وضعیت</th>
 
                 </tr>
                 </thead>
                 <tbody>
+                <?php
+                require_once "../inc/confing.php";
+                $orders= mysqli_query($connection,"SELECT * FROM orders");
+                while ($row=mysqli_fetch_array($orders)):
+
+
+                ?>
                 <tr>
                     <td>1</td>
-                    <td><img src="../uploads/1.jpg" width="100px" height="70px"></td>
-                    <td>تست</td>
-                    <td>تست</td>
-                    <td>100</td>
-                    <td><a href="#" class="btn btn-primary">مشاهده</a></td>
-                    <td>
-                        <a href="#" class="btn btn-danger">حذف</a>
-                    </td>
+                    <td><?php echo $row['name'] ?></td>
+                    <td><?php echo $row['price'] ?></td>
+                    <td><?php echo $row['authority'] ?></td>
+                    <td><?php
+                       if ($row['status']==100) {
+                           echo "پرداخت انجام شده";
+                       }else{
+                           echo "پرداخت نا موفق";
+                       }
+                        ?></td>
                 </tr>
+                <?php endwhile; ?>
                 </tbody>
             </table>
         </div>

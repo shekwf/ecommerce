@@ -38,10 +38,10 @@ $productRow=mysqli_fetch_array($getproduct);
                             while ($row=mysqli_fetch_array($query)):
 
                                 ?>
-                            <?php if ($row['id']==$productRow['cat_id']): ?>
+                            <?php //if ($row['id']==$productRow['cat_id']): ?>
                                 <option selected value="<?php echo $row['id']; ?>"><?php echo $row['cat_name']; ?></option>
-                           <?php else: ?>
-                            <?php endif; ?>
+                           <?php // else: ?>
+                            <?php //endif; ?>
                             <?php endwhile; ?>
                         </select>
                     </div>
